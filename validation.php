@@ -9,7 +9,7 @@
     $check = mysqli_query($conn, "select * from user where mobile='$mobile' and password='$pass' and role='$role' ");
 
     if(mysqli_num_rows($check) > 0){
-        $getGroups = mysqli_query($conn, "select name, votes, id, photo from user where role=2 ");
+        $getGroups = mysqli_query($conn, "select name, age, votes, id, photo from user where role=2 ");
         if(mysqli_num_rows($getGroups) > 0){
             $groups = mysqli_fetch_all($getGroups, MYSQLI_ASSOC);
             $_SESSION['groups'] = $groups;

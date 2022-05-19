@@ -66,6 +66,10 @@
                         <td><?php echo $data['mobile'] ?></td>
                     </tr>
                     <tr>
+                        <td><strong>Age:</strong></td>
+                        <td><?php echo $data['age'] ?></td>
+                    </tr>
+                    <tr>
                         <td><strong>Status:</strong></td>
                         <td><?php echo $status ?></td>
                     </tr>

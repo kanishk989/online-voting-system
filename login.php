@@ -31,10 +31,14 @@
                     </button>
                 </div>
                 <div class="card-back">
-                    <h2>REGISTER</h2>
+                    <div class="tooltip">
+                        <h2>REGISTER</h2>
+                        <span class="tooltiptext">For Group: 18</span>
+                    </div>
                     <form action="registration.php" method="POST">
                         <input type="text" class="input-box" name="name" placeholder="Full Name" required>
-                        <input type="number" class="input-box" name="mob" placeholder="Mobile No." required>
+                        <input type="number" style="width: 60%;" class="input-box" name="mob" placeholder="Mobile No." required>
+                        <input type="number" style="width: 38%;" class="input-box" name="age" placeholder="Age" required>
                         <input type="password" class="input-box" name="pass" placeholder="Password" required>
                         <input type="password" class="input-box" name="cpass" placeholder="Confirm Password" required>
                         <span class="input-box">Upload image:</span><input type="file" name="image" id="upload" required>
