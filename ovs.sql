@@ -19,7 +19,8 @@ INSERT INTO `user` (`id`, `name`, `mobile`, `age`, `photo`, `password`, `status`
 (4, 'Bharatiya Janata Party', 1, 18, 'bjp.png', 123, 1, 78, 2),
 (5, 'Indian National Congress Party', 2, 18, 'congress.png', 123, 1, 55, 2),
 (6, 'Kanishk Soni', 7015786675, 19, 'default.png', 123, 0, 0, 1),
-(7, 'Aam Aadmi Party', 3, 18, );
+(7, 'Aam Aadmi Party', 3, 18, 'aap.png', 123, 1, 62, 2),
+(8, 'Bahujan Samaj Party', 4, 18, 'bsp.png', 123, 1, 49, 2);
 
 ALTER TABLE `user` ADD PRIMARY KEY (`id`);
 

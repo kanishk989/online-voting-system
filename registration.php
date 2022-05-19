@@ -9,6 +9,7 @@
     $image = $_FILES['image']['name'];
     $tmp_name = $_FILES['image']['tmp_name'];
     $role = $_POST['role'];
+    $status = 0;
 
     if($cpass!=$pass){
         echo '<script>
@@ -16,20 +17,19 @@
                 window.location = "login.php";
             </script>';
     }
-    else if($role==1){
-        if($age<18){
-            echo '<script>
-                    alert("Age must be atleast 18 years.");
-                    window.location = "login.php";
-                </script>';
-        }
+    else if($age<18){
+        echo '<script>
+                alert("Age must be atleast 18 years.");
+                window.location = "login.php";
+            </script>';
     }
     else{
         if($role==2){
             $age = 18;
+            $status = 1;
         }
         move_uploaded_file($tmp_name,"images/$image");
-        $insert = mysqli_query($conn, "insert into user (name, mobile, age, photo, password, status, votes, role) values('$name', '$mobile', '$age', '$image', '$pass', 0, 0, '$role') ");
+        $insert = mysqli_query($conn, "insert into user (name, mobile, age, photo, password, status, votes, role) values('$name', '$mobile', '$age', '$image', '$pass', '$status', 0, '$role') ");
         if($insert){
             echo '<script>
                     alert("Registration successfull!");
